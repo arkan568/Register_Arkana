@@ -14,4 +14,33 @@
             <button type="submit"style="color : red">submit</button>
         </form>
     </body>
+</html> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Register</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        .container { width: 300px; margin: auto; padding: 20px; background: white; margin-top: 100px; border-radius: 5px; }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%; padding: 10px; margin: 5px 0 15px 0;
+        }
+        input[type="submit"] {
+            background-color: #28a745; color: white; padding: 10px; border: none; width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="register.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" name="register" value="Register">
+        </form>
+    </div>
+</body>
 </html>
