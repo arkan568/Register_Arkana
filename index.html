@@ -1,46 +1,138 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        Arkana Ghani Mulya XII-G
-        
-    </head>
-    <body>
-        <form class="" action="">
-            <input required type="text" name="" id="" value="" placeholder="Nama Lengkap" /><br />
-            <input required type="Email" name="" id="" value=""placeholder="Email" /><br />
-            <input required type="password" name="" id="" value="" placeholder="password" /><br />
-            <input required type="number" name="" id="" value="" placeholder="nomor hp" /><br />
-            <input required type="date" name="" id="" value="" placeholder="tanggal lahir" /><br />
-            <button type="submit"style="color : red">submit</button>
-        </form>
-    </body>
-</html> 
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Form Register</title>
-    <style>
-        body { font-family: Arial; background: #f4f4f4; }
-        .container { width: 300px; margin: auto; padding: 20px; background: white; margin-top: 100px; border-radius: 5px; }
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: 100%; padding: 10px; margin: 5px 0 15px 0;
-        }
-        input[type="submit"] {
-            background-color: #28a745; color: white; padding: 10px; border: none; width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Registrasi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h2>Register</h2>
-        <form action="register.php" method="POST">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" name="register" value="Register">
-        </form>
-    </div>
+
+  <div class="register-container">
+    <h2>Daftar Akun</h2>
+    <form action="#" method="post" class="register-form">
+      <div class="form-group">
+        <label for="fullname">Nama Lengkap</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Nama Pengguna</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Kata Sandi</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Konfirmasi Sandi</label>
+        <input type="password" id="confirm-password" name="confirm-password" required />
+      </div>
+
+      <button type="submit" class="btn">Daftar</button>
+      <p class="login-link">Sudah punya akun? <a href="#">Masuk di sini</a></p>
+    </form>
+  </div>
+
 </body>
 </html>
+<style>
+    /* Reset dan font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2f80ed, #56ccf2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container form */
+.register-container {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2f80ed;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #2f80ed;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.2);
+  outline: none;
+}
+
+/* Tombol */
+.btn {
+  width: 100%;
+  background-color: #2f80ed;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1f62c2;
+}
+
+/* Link ke login */
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #2f80ed;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-link a:hover {
+  text-decoration: underline;
+}
+</style>
